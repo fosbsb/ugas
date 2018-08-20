@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<style type="text/css">
+@media only screen and (max-device-width: 599px) {
+	.header {
+		height: 205px;
+	}
+}
+
+@media only screen and (max-device-width: 599px) {
+	.titulo, .subtitulo {
+		text-align: left;
+		color: #ffffff;
+		top: 5px;
+		left: 15px;
+	}
+}
+
+@media only screen and (max-device-width: 599px) {
+	.subtitulo {
+		top: -15px !important;
+	}
+}
+
+@media only screen and (max-device-width: 599px) {
+	.posicao-horario {
+		position: relative;
+		top: -30px;
+		left: 0px;
+	}
+}
+
+@media only screen and (max-device-width: 599px) {
+	.menssagem {
+		text-align: left;
+		left: 15px;
+	}
+}
+</style>
+<body>
+	<span th:text="${titulo}"></span>
+	<div class="email-background">
+		<div class="email-container" style='max-width: 600px; margin: 0 auto; font-family: "Roboto", sans-serif;'>
+
+			<div class="header row"
+				style="background: #4f54ad; text-align: center; height: 170px;">
+				<div class="col col-30">
+					<i class="logo" style='background: url("http://www.ugas.com.br/email/logo.png background-repeat : no-repeat; background-size: contain; display: block; height: 125px; position: relative; top: 20px; left: 20px;"'></i>
+				</div>
+				<div>
+					<div class="titulo row" style="text-align: center; color: #ffffff; position: relative; top: -90px;">
+						<h4>Recuperação de senha:</h4>
+					</div>
+					<div class="subtitulo row" style="text-align: center; color: #ffffff; position: relative; top: -90px;">
+						<h2 th:text="${nome}"></h2>
+					</div>
+				</div>
+			</div>
+			<div class="menssagem" style="color: #a9abae; position: relative; text-align: center;">
+				<br /> Sr(a), usuário(a),<br /> <br />informamos que sua senha,<br />
+				cadastrada em nossos sistemas é: <h3 th:text="${senha}"></h3>
+			</div>
+			<div class="borda texto-cinza" style="border-top: solid 1px #a9abae; color: #a9abae;">
+				<div>
+					<i class="suporte" style='background: url("http://www.ugas.com.br/email/logo.png background-repeat: no-repeat; background-size: contain; display: block; height: 125px; position: relative; top: 20px; left: 20px; background: url("http://www.ugas.com.br/email/suporte.png") no-repeat; width: 40px; height: 40px;'></i>
+					<div class="texto-suporte" style="position: relative; top: -20px; left: 70px;">
+						(61)3552-5383<br/>sac@ugas.com
+					</div>
+				</div>
+				<div class="posicao-horario" style="position: relative; top: -80px; left: 300px;">
+					<i class="horario" style='background: url("http://www.ugas.com.br/email/logo.png background-repeat: no-repeat; background-size: contain; display: block; height: 125px; position: relative; top: 20px; left: 20px; background: url("http://www.ugas.com.br/email/horario.png") no-repeat; width: 40px; height: 40px;'></i>
+					<div class="texto-horario"
+						style="position: relative; top: -20px; left: 70px;">
+						Seg/ Sex - 10:00 as 22:00<br />Sábado - 10:00 as 19:00
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
